@@ -1,0 +1,12 @@
+@use '../../scss/mixins/mixins.scss' as mixin;
+@use '../../scss/patterns/colors.scss' as color;
+
+footer{
+    background-color: color.$bg-color1;
+    .container{
+        @include mixin.flex($gap: 2rem);
+    }
+    a{
+        color: color.$text-color;
+    }
+}

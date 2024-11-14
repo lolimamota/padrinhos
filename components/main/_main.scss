@@ -1,0 +1,40 @@
+@use '../../scss/patterns/colors.scss' as color;
+@use '../../scss/mixins/mixins.scss' as mixin;
+
+main {
+    background-color: color.$bg-color2;
+
+    section {
+        padding-top: 1rem;
+
+        .title {
+            @include mixin.flex($justify: space-between, $align: center);
+
+            h2 {
+                color: color.$text-color;
+
+                span {
+                    font-weight: 300;
+                    display: block;
+                }
+            }
+
+            img {
+                width: 5vw;
+            }
+        }
+    }
+    .box-card{
+        @include mixin.flex($justify: space-between);
+
+        .cards {
+        @include mixin.flex($direction: column, $gap: 2rem);
+            width: 25vw;
+            h3{
+                overflow: hidden;
+                // white-space: nowrap;
+                // text-overflow: ellipsis;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@use '../../scss/mixins/mixins.scss' as mixin;
+@use '../../scss/patterns/colors.scss' as color;
+
+%btn {
+    color: color.$text-color;
+    border-radius: 1rem;
+}
+
+header {
+    background-color: color.$bg-color1;
+    img{
+        width: 20rem;
+    }
+
+    ul {
+        @include mixin.flex($gap: 2rem);
+
+        li {
+            button{
+                @extend %btn;
+                padding: 1rem 3rem;
+                background-color: transparent;
+                border: solid 1px;
+            }
+
+            &:nth-child(1) {
+                button {
+                    border: none;
+                    @extend %btn;
+                    background-color: color.$btn-acess;
+                    padding: 1rem 4rem;
+                }
+            }
+        }
+    }
+}

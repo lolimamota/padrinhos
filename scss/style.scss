@@ -1,0 +1,8 @@
+@forward './patterns/reset.scss';
+@forward './mixins/mixins.scss';
+@forward './patterns/typography.scss';
+@forward './patterns/colors.scss';
+@forward './container/container.scss';
+@forward '../components/header/header.scss';
+@forward '../components/main/main.scss';
+@forward '../components/footer/footer.scss';
